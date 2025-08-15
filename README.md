@@ -21,6 +21,19 @@ Ensure all folders are in the root, alongside game.py, editor.py and map.json
 The game is a 2D platformer with a level editor included. The playable character is given infinite flight as the "Aston University Goose".
 No proper mechanics other than collisions, movement flight and level editing have been implemented due to a lack of time to learn how to do such things as well as how to implement them.
 
+### In-Game Controls
+Character is **moved** via **WASD** keys, then using **spacebar** to **jump/fly**
+
+### In-Editor Controls
+Screen/camera is **moved** via **WASD** keys, **left-click** to **place a block** and *hold left-click* to place multiple. **right-click** to **delete a block** and *hold right-click* to delete multiple.
+
+Use the **scroll wheel** to change **block type**; Then hold **shift** while using the **scroll wheel** to **Switch block kind**.
+
+Press **'G'** *on the keyboard* to **toggle grid mode**. 
+
+Press **'O'** *on the keyboard* to **save the map** to map.json. Extra map features to be added I guess
+
+### Game('s) Vision
 The vision was for the goose to be able to use its figure skating blades to attack incoming pedestrians in a snowy, Birmingham day. The end goal was making the goose perform a triple axel, which sadly did not end up happening.
 
 Watchers and cloners are encouraged to rip anything and everything from this and improve on it! Game creation is fun!
