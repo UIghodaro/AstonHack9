@@ -46,11 +46,13 @@ class Game:
     def run(self):
         while True:
             self.display.fill((0, 0, 0))
-            #self.display.blit(pygame.transform.scale(self.assets['background'], self.display.get_size()), (0, 0))
+
+            #The background - comment this line out if it's hurting your eyes
+            self.display.blit(pygame.transform.scale(self.assets['background'], self.display.get_size()), (0, 0))
             
             #????
             #This is magic btw don't ask me what the fuck this is
-            #It controls the camera, full stop
+            #It controls the camera, is all
             self.scroll[0] += (self.player.rect().centerx - self.display.get_width() / 2 - self.scroll[0]) / 30
             self.scroll[1] += (self.player.rect().centery - self.display.get_width() / 2 - self.scroll[1]) / 30
             render_scroll = (int(self.scroll[0]), int(self.scroll[1]))
@@ -90,5 +92,6 @@ class Game:
             self.screen.blit(pygame.transform.scale(self.display, self.screen.get_size()), (0,0))
             pygame.display.update()     #Updates the display so changes actually happen
             self.clock.tick(60)     #60 FPS baby
+
 
 Game().run()
