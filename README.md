@@ -1,39 +1,55 @@
-# Solo Hackathon Project: One Skater Smashed
-First videogame project I ever made, created in under 24 hours at the AstonHack9 Competition using python with pygame libraries
+# One Skater Smashed
+**Solo 2D platformer prototype** built in under 24 hours at AstonHack9 using Python & Pygame.  
+Awarded **3rd place** and sponsor prizes for back-end design and primary asset customisation.
 
-## Tech & setup
-The game was built such that running game.py from the root should run the entire game.
-- If python or pygame is not installed, run the following in bash for dependencies
+**Requires:** *Python 3.8+*\
+You can check python version by running ``python3 --version`` on macOS/Linux and ``python --version`` on Windows powershell/cmd
+
+## Setup (from repo root)
+Using a virtual environment to run the repo for a demo. If you wish to install dependencies locally, ignore the first 2 lines starting the virtual environment:
+### macOS / Linux
 ```bash
-pip install python
-pip install pygame
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 game.py
 ```
-
-Following this:
-1. run game.py in an IDE or by typing ``python game.py`` in terminal of the repo root to access the game (controls are A and D for left and right movement respectively, spacebar to fly) OR 
-2. run editor.py in an IDE or by typing ``python editor.py`` in terminal of the repo root to access the level editor and place your own blocks, changing the map.json file dynamically
-
-### Possible issue
-If, when attempting to run game.py or editor.py, an error comes up along the lines of ``The system cannot find specified path: 'gameRss/images/...'`` then it is highly likely the python file is not being run from the root or the folders are not in the root. 
-Ensure all folders are in the root, alongside game.py, editor.py and map.json
-
-## Game Scope
+### Windows PowerShell
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python game.py
+```
+### Windows Command Prompt
+```bash
+python -m venv venv
+venv\Scripts\activate.bat
+pip install -r requirements.txt
+python game.py                     # Or `python3 game.py` on some systems
+```
+*Alternatively, to ``python game.py``, you can use ``python editor.py`` to open the level editor*\
+When done with the demo:
+```bash
+deactivate  # Shut down the virtual environment
+```
+*Note: `requirements.txt` has minimal packages. Exact versions will be updated with `pip freeze` once I can access the original dev environment*
+## What's included
 The game is a 2D platformer with a level editor included. The playable character is given infinite flight as the "Aston University Goose".
-No proper mechanics other than collisions, movement flight and level editing have been implemented due to a lack of time to learn how to do such things as well as how to implement them.
+- ``game.py`` - Playable demo
+- ``editor.py`` - Level editor
+- ``gameRss/images/`` - Assets (sprites & tiles)
+- ``backEnd/`` - Back-end functionalities including entity, map generation/interaction and general utility code
+- ``map.json`` - A ready-made example level
 
 ### In-Game Controls
-Character is **moved** via **WASD** keys, then using **spacebar** to **jump/fly**
+- **Movement**: ``W/A/S/D``
+- **Jump/Fly**: ``Space``
 
-### In-Editor Controls
-Screen/camera is **moved** via **WASD** keys, **left-click** to **place a block** and *hold left-click* to place multiple. **right-click** to **delete a block** and *hold right-click* to delete multiple.
+### Editor-Specific Controls
+- **Place/Remove block**: ``Left Click - Place | Right Click - Remove``   (Hold to place or remove multiple)
+- **Change Block Type/Kind**: ``Scroll Wheel - Change Type | Shift+Scroll Wheel - Change Kind``
+- **Misc**: Press ``G`` to toggle on-grid and off-grid placement, then ``O`` to save and overwrite map.json
 
-Use the **scroll wheel** to change **block type**; Then hold **shift** while using the **scroll wheel** to **Switch block kind**.
-
-Press **'G'** *on the keyboard* to **toggle grid mode**. 
-
-Press **'O'** *on the keyboard* to **save the map** to map.json. Extra map features to be added I guess
-
-### Game('s) Vision
-The vision was for the goose to be able to use its figure skating blades to attack incoming pedestrians in a snowy, Birmingham day. The end goal was making the goose perform a triple axel, which sadly did not end up happening.
-
-Watchers and cloners are encouraged to rip anything and everything from this and improve on it! Game creation is fun!
+## Contact
+Built by Uyi Ighodaro - www.linkedin.com/in/uyi-ighodaro14572\
